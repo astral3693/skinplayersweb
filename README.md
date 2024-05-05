@@ -2,6 +2,7 @@ Dependencies for skinplayersweb 2 Plugin
 
 1 CS2-PlayerModelChanger
 	https://github.com/samyycX/CS2-PlayerModelChanger
+ 
 2 MultiAddonManager
 	https://github.com/Source2ZE/MultiAddonManager
  
