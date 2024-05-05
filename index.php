@@ -19,31 +19,33 @@ if ($conn->connect_error) {
 $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
 ?>
 <!DOCTYPE html>
-<html><head>
+<html lang="en"<?php if(WEB_STYLE_DARK) echo 'data-bs-theme="dark"'?>>
+
+<head>
 <title>select</title>
 
 
 
-<style>
-body {background-color: orange;}
-h1   {color: blue;}
-p    {color: black;}
-
-table, th, td {
-  border:0px solid black;
-}
-</style>
+<meta charset="utf-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <hr>
 <form action="update.php" method="get">
-<h1><p>Skin Players Custom Admin & VIP</p></h1>
+<div class='card-header'>
+<h5 class='card-title item-name'>Skin Players Custom Admin & VIP</p></h5>
+
+<div class="card-footer">
 <table style="width:50%" >
 <tr>
 
-<th><?php if ($ct_model<>""){echo "<font color=blue> CT: ".strtoupper($ct_model)."</font>";}else{echo "<font color=blue> CT: Default</font>";} ?> <img id="image" height="200" src="img/counter-strike-2-changes.jpg" alt=""></th>
-<th> <?php if ($t_model<>""){echo "</font><font color=red>T: ".strtoupper($t_model)."</font>";}else{echo "<font color=blue> T: Default</font>";} ?><img id="image2" height="200" src="img/Is-Counter-Strike.jpg" alt=""></th>
+<th><?php if ($ct_model<>""){echo "<font color=grey> CT: ".strtoupper($ct_model)."</font>";}else{echo "<font color=grey> CT: Default</font>";} ?> <img id="image" height="200" src="img/counter-strike-2-changes.jpg" alt=""></th>
+<th> <?php if ($t_model<>""){echo "</font><font color=grey>T: ".strtoupper($t_model)."</font>";}else{echo "<font color=grey> T: Default</font>";} ?><img id="image2" height="200" src="img/Is-Counter-Strike.jpg" alt=""></th>
 </tr>
 
 <tr><th>Skin Select CT:
@@ -94,13 +96,13 @@ table, th, td {
 			<tr>
 			<th>
 			<label for="cars">Id steam64:</label>
-			<select  name="steamid" id="steamid"><option value="<?php echo $steamid;?>"><?php echo $steamid;?></option>
+			<select  name="steamid" id="steamid"><option value="<?php echo $steamid;?>"><?php echo $steamid;?>
 		   <?php
               while($resultado = mysqli_fetch_array($sql)){ ?>  
 					
                   <option value="<?=  $resultado['steamid'] ?>"><?php echo $resultado['steamid']; ?></option>
 				 
-                  <?php } ?> </select></th>
+                  <?php } ?> </select></option> <input type="submit"></th>
 				  
 				  <th>
 				 <?php  echo "<font color=green>".$rs."</font><br/>Steam " .$steamid;?>
@@ -110,9 +112,11 @@ table, th, td {
 
 
 </table>
+</div>
+</div>
 
 <input type='hidden' id='t_model' name='t_model' value=''>
-<input type='hidden' id='ct_model' name='ct_model' value=''><input type="submit">
+<input type='hidden' id='ct_model' name='ct_model' value=''>
 </form>
 <hr>
 
