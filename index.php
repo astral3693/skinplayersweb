@@ -27,23 +27,32 @@ $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
 <html lang="en"<?php if(WEB_STYLE_DARK) echo 'data-bs-theme="dark"'?>>
 
 <head>
-<title>select</title>
+<title>Skin Players Custom Admin & VIP</title>
 
 
 
 <meta charset="utf-8">
+<link rel="icon" href="favicon.ico">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style3.css">
+	<link rel="stylesheet" href="style2.css">
+	
+	<script>	
+	$(document).ready(function(){
+  $('#dropDown').click(function(){
+    $('.drop-down').toggleClass('drop-down--active');
+  });
+});</script>
 </head>
 <body>
-
+<?php include "home.php";  ?>
 <hr>
 <form action="update.php" method="get">
 <div class='card-header'>
-<h5 class='card-title item-name'>Skin Players Custom Admin & VIP</p></h5>
+<h5 class='card-title item-name'><font color='#4682B4'><img src="OIG2.jpg" width="120" height="105" />Skin Players Custom Admin & VIP</img></p></h5>
 
 <div class="card-footer">
 <table style="width:50%" >
@@ -133,7 +142,7 @@ $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
 <div class="container">
 		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
 			<div class="col-md-4 d-flex align-items-center">
-				<span class="mb-3 mb-md-0 text-body-secondary">© 2024 Skins Player Web v2.0 by Astral</span>
+				<span class="mb-3 mb-md-0 text-body-secondary"><font color='#4682B4'>© 2024 GAMIER NO MORE Web v2.0 by Astral</font></span>
 			</div>
 		</footer>
 	</div>
