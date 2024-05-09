@@ -7,8 +7,12 @@
  
 2 MultiAddonManager
 	https://github.com/Source2ZE/MultiAddonManager
+
  
-3 Config Php Painel
+3 CS2-SimpleAdmin
+	https://github.com/daffyyyy/CS2-SimpleAdmin
+ 
+4 Config Php Painel
 # skinplayersweb
 skin players web
 
