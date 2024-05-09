@@ -1,10 +1,15 @@
 <?php
 include "config.php";
-$steamid = $_GET['id'];
-$rs = $_GET['rs'];
-$t_model =  $_GET['t_model'];
-$ct_model =  $_GET['ct_model'];
 
+if (isset($_GET["id"], $_GET["rs"], $_GET["t_model"], $_GET["ct_model"])) {
+	
+$steamid = $_GET['id']; $rs = $_GET['rs']; $t_model =  $_GET['t_model']; $ct_model =  $_GET['ct_model'];
+
+}else{
+	
+$steamid = ''; $rs = ''; $t_model =  ''; $ct_model =  '';
+
+}
 
    
 
@@ -15,7 +20,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
-
+define('WEB_STYLE_DARK', 'data-bs-theme="dark"');
 $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
 ?>
 <!DOCTYPE html>
