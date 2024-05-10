@@ -16,19 +16,19 @@
 
 8 Config Php Painel
 
-# skinplayersweb
+# Skinplayersweb Dependencies
 
 1 mariadb mariadb-11.3.2-winx64.msi https://mariadb.org/download/
 
 2 PhP php-7.4.8-Win32-vc15-x64.zip https://php.watch/versions/7.4/releases/7.4.8
 
 	 edit or creat C:\php-7.4
-    	 copy all for php 7.4 https://github.com/astral3693/skinplayersweb/blob/main/php-7.4/php.ini
+copy all for php 7.4 https://github.com/astral3693/skinplayersweb/blob/main/php-7.4/php.ini
 
 3 Apache httpd-2.4.59-240404-win64-VS17.zip https://www.apachelounge.com/download/
 
 	 edit or creat C:\Apache24\conf\httpd.conf
-    	 copy all for php 7.4 https://github.com/astral3693/skinplayersweb/blob/main/Apache24/conf/httpd.conf
+copy all for php 7.4 https://github.com/astral3693/skinplayersweb/blob/main/Apache24/conf/httpd.conf
 
 C:\Apache24\bin\httpd.exe -k install
 
@@ -44,10 +44,8 @@ PhpmyAdmin phpMyAdmin-5.2.1-all-languages.zip https://www.phpmyadmin.net/
 	edit or creat C:\Apache24\htdocs\phpMyAdmin\config.inc.php
  	creat  http://localhost/PhpmyAdmin/setup donwload config.inc.php
   	Add C:\Apache24\htdocs\phpMyAdmin\config.inc.php
- 
-skin players web
 
-Skins Player Web v2.0
+# SkinsPlayerWeb edit filesv2.4
 
 1 edit config.php database
 
