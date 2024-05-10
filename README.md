@@ -32,7 +32,17 @@ Skins Player Web v2.0
 	<side>CT</side> // CT OR T OR ALL
 	</item>
 
-3 edit skins.js Custom img javascript
+3 edit  Server.xml
+
+	<item>
+	<title>[CS2]ASTRAL SERVER SKINS | KNIFE | WS | VIPNIGHT | RANKED</title>
+	<playes>1/30</playes>
+	<ip>26.67.120.79</ip>
+	<port>27015</port>
+	<map>de_dust2</map>
+	</item>
+
+4 edit skins.js Custom img javascript
 
 Directory /img/xxx.jpg or png or gif
 
