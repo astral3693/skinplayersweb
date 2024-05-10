@@ -2,19 +2,20 @@
 ![image](https://github.com/astral3693/skinplayersweb/assets/149034744/dbcab622-2a24-4a00-ad8c-fae3d1f1569d)
 # Dependencies Plugins CS2 C#
 
-1 CS2-PlayerModelChanger
-	https://github.com/samyycX/CS2-PlayerModelChanger
- 
-2 MultiAddonManager
-	https://github.com/Source2ZE/MultiAddonManager
+1  MetaModSource 2.0 CS2 https://www.metamodsource.net/downloads.php/?branch=maste
 
-3 CS2-SimpleAdmin
-	https://github.com/daffyyyy/CS2-SimpleAdmin
- 
-4 CS2Rcon
- 	https://github.com/LordFetznschaedl/CS2Rcon
- 
-5 Config Php Painel
+2 CounterStrikeSharp https://github.com/roflmuffin/CounterStrikeSharp/releases
+
+3 CS2-SimpleAdmin https://github.com/daffyyyy/CS2-SimpleAdmin
+
+4 CS2Rcon https://github.com/LordFetznschaedl/CS2Rcon
+
+6 CS2-PlayerModelChanger https://github.com/samyycX/CS2-PlayerModelChanger
+
+7 MultiAddonManager https://github.com/Source2ZE/MultiAddonManager
+
+8 Config Php Painel
+
 # skinplayersweb
 skin players web
 
