@@ -46,5 +46,13 @@ Skins Player Web v2.0
 
 4 edit skins.js Custom img javascript
 
+	     if (value == "leao"){
+                 image.src = "/img/657ca211c7f7d.jpg";
+             }else if (value == "rei") {
+                 image.src = "/img/657ca4c525a9a.jpg";
+             }else if (value == "gata") {
+                 image.src = "/img/6557a5921a38c.jpg";
+             }
+
 Directory /img/xxx.jpg or png or gif
 
