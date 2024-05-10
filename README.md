@@ -24,6 +24,9 @@
 
 3 Apache httpd-2.4.59-240404-win64-VS17.zip https://www.apachelounge.com/download/
 
+	 edit or creat C:\Apache24\conf\httpd.conf
+    	 copy all for php 7.4 https://github.com/astral3693/skinplayersweb/blob/main/Apache24/conf/httpd.conf
+
 C:\Apache24\bin\httpd.exe -k install
 
 
