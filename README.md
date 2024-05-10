@@ -22,6 +22,9 @@
 
 2 PhP php-7.4.8-Win32-vc15-x64.zip https://php.watch/versions/7.4/releases/7.4.8
 
+	 edit or creat C:\php-7.4
+    	 copy all for php 7.4 https://github.com/astral3693/skinplayersweb/blob/main/php-7.4/php.ini
+
 3 Apache httpd-2.4.59-240404-win64-VS17.zip https://www.apachelounge.com/download/
 
 	 edit or creat C:\Apache24\conf\httpd.conf
