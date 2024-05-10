@@ -18,15 +18,35 @@
 
 # skinplayersweb
 skin players web
-
+@@ text in purple (and bold)@@
 Skins Player Web v2.0
 
 1 edit config.php database
 
-	$servername = "";
-	$username = "";
-	$password = "";
-	$dbname = "";
+	$servername = "localhost";
+	$username = "ogpuser";
+	$password = "0073007";
+	$dbname = "playermodelchanger";
+ 
+ 1-1 edit CS2-SimpleAdmin.json game\csgo\addons\counterstrikesharp\configs\plugins\CS2-SimpleAdmin\CS2-SimpleAdmin.json
+
+        {
+          "ConfigVersion": 14,
+          "DatabaseHost": "localhost",
+          "DatabasePort": 3306,
+          "DatabaseUser": "ogpuser",
+          "DatabasePassword": "0073007",
+          "DatabaseName": "playermodelchanger",
+	  
+1-2 edit PlayerModelChanger.json game\csgo\addons\counterstrikesharp\ configs\plugins\PlayerModelChanger\PlayerModelChanger.json
+
+          "StorageType": "mysql", // sqlite or mysql
+          "MySQL_IP": "localhost",
+          "MySQL_Port": "3306",
+          "MySQL_User": "ogpuser",
+          "MySQL_Password": "0073007",
+          "MySQL_Database": "playermodelchanger",
+          "MySQL_Table": "playermodelchanger",
 
 2 edit  Skin_Players.xml (It already comes with an example, there is no need to configure it now)
 
