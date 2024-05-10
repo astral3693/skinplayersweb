@@ -25,11 +25,13 @@
 3 Apache httpd-2.4.59-240404-win64-VS17.zip https://www.apachelounge.com/download/
 
 C:\Apache24\bin\httpd.exe -k install
+
+
 	httpd.exe -k start
 	httpd.exe -k stop
 	ApacheMonitor.exe
 
-config https://httpd.apache.org/docs/current/platform/windows.html#down
+
 skin players web
 
 Skins Player Web v2.0
