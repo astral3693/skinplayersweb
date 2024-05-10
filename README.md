@@ -37,7 +37,14 @@ C:\Apache24\bin\httpd.exe -k install
 	httpd.exe -k stop
 	ApacheMonitor.exe
 	WEB FILES http://localhost C:\Apache24\htdocs
+ 
+PhpmyAdmin phpMyAdmin-5.2.1-all-languages.zip https://www.phpmyadmin.net/
 
+	WEB FILES http://localhost/PhpmyAdmin C:\Apache24\htdocs\PhpmyAdmin\
+	edit or creat C:\Apache24\htdocs\phpMyAdmin\config.inc.php
+ 	creat  http://localhost/PhpmyAdmin/setup donwload config.inc.php
+  	Add C:\Apache24\htdocs\phpMyAdmin\config.inc.php
+ 
 skin players web
 
 Skins Player Web v2.0
