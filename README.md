@@ -45,7 +45,7 @@ PhpmyAdmin phpMyAdmin-5.2.1-all-languages.zip https://www.phpmyadmin.net/
  	creat  http://localhost/PhpmyAdmin/setup donwload config.inc.php
   	Add C:\Apache24\htdocs\phpMyAdmin\config.inc.php
 
-# SkinsPlayerWeb edit filesv2.4
+# SkinsPlayerWeb edit files v2.4
 
 1 edit config.php database
 
