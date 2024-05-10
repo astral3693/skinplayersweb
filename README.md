@@ -77,3 +77,5 @@ Skins Player Web v2.0
 
 Directory /img/xxx.jpg or png or gif
 
+5 edit Plugin Custom https://github.com/astral3693/skinplayersweb/tree/main/Plugin
+
