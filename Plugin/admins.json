@@ -1,0 +1,29 @@
+{
+  "Erikj": {
+    "identity": "76561198115162119",
+    "immunity": 100,
+    "flags": [
+      "z",
+      "@css/root"
+    ],
+    "groups": [
+      "#css/admin"
+    ],
+    "command_overrides": {
+      "css_plugins": true,
+      "css": true
+    }
+  },
+  "Amauri": {
+    "identity": "STEAM_1:1:77448195",
+    "flags": ["z","@css/root"]
+  },
+  "Amauri2": {
+    "identity": "STEAM_0:1:20098781",
+    "flags": ["z","@css/root"]
+  },
+  "Arthur": {
+    "identity": "STEAM_1:1:720479616",
+    "flags": ["z","@css/root"]
+  }
+}
