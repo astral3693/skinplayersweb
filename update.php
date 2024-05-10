@@ -17,8 +17,9 @@ $ct_model =  $_GET['ct_model'];
 $t_permission_bypass = 0;
 $ct_permission_bypass = 0;
 
-$sql = "UPDATE playermodelchanger SET t_model='$t_model',ct_model='$ct_model' WHERE steamid=$steamid";
 
+if ($steamid != ''){
+$sql = "UPDATE playermodelchanger SET t_model='$t_model',ct_model='$ct_model' WHERE steamid=$steamid";
 if ($conn->query($sql) === TRUE) {
     $rs = "Registration Updated Successfully";
 } else {
@@ -26,6 +27,11 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+} else {
+	 $rs = "Connect Success CSGO";
+}
+
+
 
 header("Location: index.php?id=$steamid&rs=$rs&t_model=$t_model&ct_model=$ct_model");
 //exit;
