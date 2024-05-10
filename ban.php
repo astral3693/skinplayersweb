@@ -50,15 +50,29 @@ $sql  = mysqli_query($conn, "SELECT * FROM sa_bans");
 <body>
 <?php include "home.php";  ?>
 <hr>
-<form action="http://26.67.120.79/website/index.php" method="get">
+<form action="ban.php" method="get">
 <div class='card-header'>
 <h5 class='card-title item-name'><img src="OIG2.jpg" width="120" height="105" /><font color='#4682B4'>Gamier NO MORE LIST BAN</font> </p></h5>
 <table style="width:70%" class="drop-down__button">
-<tr><th>Server</th>	<th>Players</th>	<th>IP</th>	<th>Port</th>	<th>Map</th>	<th>.</th></tr>
-<tr><th>
-  <marquee>[CS2]ASTRAL SERVER SKINS | KNIFE | WS | VIPNIGHT | RANKED </marquee>
-</th>	 <th>1/30</th>	<th>26.67.120.79</th>	<th>27015</th>	<th>de_dust2</th><th><button onclick="document.location='steam://connect/26.67.120.79:27015'">Connect</button></th></tr>
-</table>
+<tr>
+<?php
+    $link = "Server.xml";
+    $xml = simplexml_load_file($link) -> channel;
+
+
+    foreach($xml -> item as $item){?>
+		
+       <th><marquee><font color='white'><?php echo utf8_decode($item -> title); ?></font></marquee></th>";
+		
+        <th><font color='white'><?php echo utf8_decode($item -> playes); ?></font></th>";
+		<th><font color='white'><?php echo utf8_decode($item -> ip); ?></font></th>";
+		<th><font color='white'><?php echo utf8_decode($item -> port); ?></font></th>";
+		<th><font color='white'><?php echo utf8_decode($item -> map); ?></font></th>";
+		<th><button onclick="document.location='steam://connect/<?php echo utf8_decode($item -> ip).":".utf8_decode($item -> port); ?>'">Connect</button></th></tr>
+		
+   <?php } 
+?>
+</tr></table>
 <hr>
 <table style="width:100%" >
 <tr bgcolor=#708090>

@@ -54,7 +54,32 @@ $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
 <div class='card-header'>
 <h5 class='card-title item-name'><font color='#4682B4'><img src="OIG2.jpg" width="120" height="105" />Skin Players Custom Admin & VIP</img></p></h5>
 
+
+<table style="width:70%" class="drop-down__button"><font color="white">
+<tr><th><font color="white">Server</font></th>	<th><font color="white">Players</font></th>	<th><font color="white">IP</font></th>	<th><font color="white">Port</font></th>	<th><font color="white">Map</font></th>	<th>.</th></tr>
+<tr>
+<?php
+    $link = "Server.xml";
+    $xml = simplexml_load_file($link) -> channel;
+
+
+    foreach($xml -> item as $item){?>
+		
+       <th><marquee><font color='white'><?php echo utf8_decode($item -> title); ?></font></marquee></th>";
+		
+        <th><font color='white'><?php echo utf8_decode($item -> playes); ?></font></th>";
+		<th><font color='white'><?php echo utf8_decode($item -> ip); ?></font></th>";
+		<th><font color='white'><?php echo utf8_decode($item -> port); ?></font></th>";
+		<th><font color='white'><?php echo utf8_decode($item -> map); ?></font></th>";
+		<th><button onclick="document.location='steam://connect/<?php echo utf8_decode($item -> ip).":".utf8_decode($item -> port); ?>'">Connect</button></th></tr>
+		
+   <?php } 
+?>
+</tr>
+</table>
 <div class="card-footer">
+
+<center>
 <table style="width:50%" >
 <tr>
 
@@ -62,7 +87,7 @@ $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
 <th> <?php if ($t_model<>""){echo "</font><font color=grey>T: ".strtoupper($t_model)."</font>";}else{echo "<font color=grey> T: Default</font>";} ?><img id="image2" height="200" src="img/Is-Counter-Strike.jpg" alt=""></th>
 </tr>
 
-<tr><th>Skin Select CT:
+<tr><th><font color='#4682B4'>Skin Select CT:</font>
            <select onchange="changingSelection(this)"><option value="">Default</option>				  
 				  <?php
     $link = "Skin_Players.xml";
@@ -85,7 +110,7 @@ $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
 			
 </th>
 
-<th>Skin Select T:
+<th><font color='#4682B4'>Skin Select T:</font>
            <select onchange="changingSelection2(this)"><option value="">Default</option>				  
 				  <?php
     $link = "Skin_Players.xml";
@@ -109,7 +134,7 @@ $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
 			</tr>
 			<tr>
 			<th>
-			<label for="cars">Id steam64:</label>
+			<label for="cars"><font color='#4682B4'>Id steam64:</font></label>
 			<select  name="steamid" id="steamid"><option value="<?php echo $steamid;?>"><?php echo $steamid;?>
 		   <?php
               while($resultado = mysqli_fetch_array($sql)){ ?>  
@@ -119,19 +144,27 @@ $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
                   <?php } ?> </select></option> <input type="submit"></th>
 				  
 				  <th>
-				 <?php  echo "<font color=green>".$rs."</font><br/>Steam " .$steamid;?>
+				 <?php  echo "<font color=green>".$rs."</font><br/><font color='#4682B4'>Steam</font> " .$steamid;?>
     </th>
 			
 </tr>
 
 
-</table>
+</table></center>
 </div>
 </div>
 
 <input type='hidden' id='t_model' name='t_model' value=''>
 <input type='hidden' id='ct_model' name='ct_model' value=''>
 </form>
+<div style='text-align:left'>
+<font color='#4682B4'>Useful commands:</font><p><textarea cols="70" rows="6" disabled>!rcon pmc_resynccache
+!modeladmin reload
+!rcon sv_cheats 1
+thirdperson
+!rcon sv_cheats 0
+!rcon css_addadmin 76561198115162119 Astral #pmc/admin 99 99999
+</textarea></p></div>
 <hr>
 
 <!--LINK JQUERY-->
