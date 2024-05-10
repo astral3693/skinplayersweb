@@ -18,9 +18,12 @@
 
 # skinplayersweb
 
-1 mariadb mariadb-11.3.2-winx64.msi https://mariadb.org/download/?t=mariadb&p=mariadb&r=11.3.2&os=windows&cpu=x86_64&pkg=msi&mirror=fder
+1 mariadb mariadb-11.3.2-winx64.msi https://mariadb.org/download/
+
 2 PhP php-7.4.8-Win32-vc15-x64.zip https://php.watch/versions/7.4/releases/7.4.8
+
 3 Apache httpd-2.4.59-240404-win64-VS17.zip https://www.apachelounge.com/download/
+
 C:\Apache24\bin\httpd.exe -k install
 	httpd.exe -k start
 	httpd.exe -k stop
