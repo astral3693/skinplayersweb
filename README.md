@@ -36,7 +36,7 @@ C:\Apache24\bin\httpd.exe -k install
 	httpd.exe -k start
 	httpd.exe -k stop
 	ApacheMonitor.exe
-
+	WEB FILES http://localhost C:\Apache24\htdocs
 
 skin players web
 
