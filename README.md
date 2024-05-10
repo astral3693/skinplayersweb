@@ -28,14 +28,14 @@ Skins Player Web v2.0
 	$password = "";
 	$dbname = "";
 
-2 edit  Skin_Players.xml
+2 edit  Skin_Players.xml (It already comes with an example, there is no need to configure it now)
 
 	<item>
 	<title>leao</title>// NAME
 	<side>CT</side> // CT OR T OR ALL
 	</item>
 
-3 edit  Server.xml
+3 edit  Server.xml (It already comes with an example, there is no need to configure it now)
 
 	<item>
 	<title>[CS2]ASTRAL SERVER SKINS | KNIFE | WS | VIPNIGHT | RANKED</title>
@@ -45,7 +45,7 @@ Skins Player Web v2.0
 	<map>de_dust2</map>
 	</item>
 
-4 edit skins.js Custom img javascript
+4 edit skins.js Custom img javascript (It already comes with an example, there is no need to configure it now)
 
 	     if (value == "leao"){
                  image.src = "/img/657ca211c7f7d.jpg";
