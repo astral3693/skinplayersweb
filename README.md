@@ -18,7 +18,7 @@
 
 # skinplayersweb
 skin players web
-@@ text in purple (and bold)@@
+
 Skins Player Web v2.0
 
 1 edit config.php database
