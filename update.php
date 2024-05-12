@@ -14,12 +14,14 @@ if ($conn->connect_error) {
 $steamid = $_GET['steamid'];
 $t_model =  $_GET['t_model'];
 $ct_model =  $_GET['ct_model'];
+$img =  $_GET['img'];
+$img2 =  $_GET['img2'];
 $t_permission_bypass = 0;
 $ct_permission_bypass = 0;
 
 
 if ($steamid != ''){
-$sql = "UPDATE playermodelchanger SET t_model='$t_model',ct_model='$ct_model' WHERE steamid=$steamid";
+$sql = "UPDATE playermodelchanger SET t_model='$t_model',ct_model='$ct_model',img='$img' WHERE steamid=$steamid";
 if ($conn->query($sql) === TRUE) {
     $rs = "Registration Updated Successfully";
 } else {
@@ -33,7 +35,7 @@ $conn->close();
 
 
 
-header("Location: index.php?id=$steamid&rs=$rs&t_model=$t_model&ct_model=$ct_model");
+header("Location: index.php?id=$steamid&rs=$rs&t_model=$t_model&ct_model=$ct_model&img=$img&img2=$img2");
 //exit;
 
 

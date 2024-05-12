@@ -11,6 +11,11 @@
 </image>
 
 <item>
+<title>Default</title>
+<side>ALL</side>
+</item>
+
+<item>
 <title>leao</title>
 <side>CT</side>
 </item>
@@ -72,6 +77,16 @@
 
 <item>
 <title>roblox8</title>
+<side>CT</side>
+</item>
+
+<item>
+<title>gangle</title>
+<side>ALL</side>
+</item>
+
+<item>
+<title>gloria</title>
 <side>CT</side>
 </item>
 

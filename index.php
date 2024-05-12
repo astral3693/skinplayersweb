@@ -1,13 +1,13 @@
 <?php
 include "config.php";
 
-if (isset($_GET["id"], $_GET["rs"], $_GET["t_model"], $_GET["ct_model"])) {
+if (isset($_GET["id"], $_GET["rs"], $_GET["t_model"], $_GET["ct_model"], $_GET["img"], $_GET["img2"])) {
 	
-$steamid = $_GET['id']; $rs = $_GET['rs']; $t_model =  $_GET['t_model']; $ct_model =  $_GET['ct_model'];
+$steamid = $_GET['id']; $rs = $_GET['rs']; $t_model =  $_GET['t_model']; $ct_model =  $_GET['ct_model']; $img =  $_GET['img']; $img2 =  $_GET['img2'];
 
 }else{
 	
-$steamid = ''; $rs = ''; $t_model =  ''; $ct_model =  '';
+$steamid = ''; $rs = ''; $t_model =  ''; $ct_model =  ''; $img =  ''; $img2 =  '';
 
 }
 
@@ -37,7 +37,7 @@ $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="style3.css">
+
 	<link rel="stylesheet" href="style2.css">
 	
 	<script>	
@@ -83,8 +83,8 @@ $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
 <table style="width:50%" >
 <tr>
 
-<th><?php if ($ct_model<>""){echo "<font color=grey> CT: ".strtoupper($ct_model)."</font>";}else{echo "<font color=grey> CT: Default</font>";} ?> <img id="image" height="200" src="img/counter-strike-2-changes.jpg" alt=""></th>
-<th> <?php if ($t_model<>""){echo "</font><font color=grey>T: ".strtoupper($t_model)."</font>";}else{echo "<font color=grey> T: Default</font>";} ?><img id="image2" height="200" src="img/Is-Counter-Strike.jpg" alt=""></th>
+<th><?php if ($ct_model<>""){echo "<font color=grey> CT: ".strtoupper($ct_model)."</font><img id='image' height='200' src='".$img."' alt=''>";}else{echo "<font color=grey> CT: Default</font><img id='image' height='200' src='img/counter-strike-2-changes.jpg' alt=''>";} ?> </th>
+<th> <?php if ($t_model<>""){echo "</font><font color=grey>T: ".strtoupper($t_model)."</font><img id='image2' height='200' src='".$img2."' alt=''>";}else{echo "<font color=grey> T: Default</font><img id='image2' height='200' src='img/Is-Counter-Strike.jpg' alt=''>";} ?></th>
 </tr>
 
 <tr><th><font color='#4682B4'>Skin Select CT:</font>
@@ -156,9 +156,11 @@ $sql  = mysqli_query($conn, "SELECT * FROM playermodelchanger");
 
 <input type='hidden' id='t_model' name='t_model' value=''>
 <input type='hidden' id='ct_model' name='ct_model' value=''>
+<input type='hidden' id='img' name='img' value=''>
+<input type='hidden' id='img2' name='img2' value=''>
 </form>
 <div style='text-align:left'>
-<font color='#4682B4'>Useful commands:</font><p><textarea cols="70" rows="6" disabled>!rcon pmc_resynccache
+<font color='#4682B4'>Useful commands:</font><p><textarea cols="70" rows="8" disabled>!rcon pmc_resynccache
 !modeladmin reload
 !rcon sv_cheats 1
 thirdperson
