@@ -8,23 +8,23 @@ function changingSelection(selection){
 	ct_model.value = value;
 
     if (value == "leao"){
-        image.src = "/img/657ca211c7f7d.jpg";
+        image.src = "img/657ca211c7f7d.jpg";
 		img.value = image.src;
     } 
 	else if (value == "rei") {
-        image.src = "/img/657ca4c525a9a.jpg";
+        image.src = "img/657ca4c525a9a.jpg";
 		img.value = image.src;
 
     }else if (value == "macaco") {
-        image.src = "/img/657ca6f29829f.jpg";
+        image.src = "img/657ca6f29829f.jpg";
 		img.value = image.src;
 
     }else if (value == "gata") {
-        image.src = "/img/6557a5921a38c.jpg";
+        image.src = "img/6557a5921a38c.jpg";
 		img.value = image.src;
 
     }else if (value == "samael") {
-        image.src = "/img/659c438748d36.jpg";
+        image.src = "img/659c438748d36.jpg";
 		img.value = image.src;
 
     }
@@ -34,17 +34,17 @@ function changingSelection(selection){
 
     }
 	else if (value == "roblox7") {
-        image.src = "/img/658f23c02710f.jpg";
+        image.src = "img/658f23c02710f.jpg";
 		img.value = image.src;
 
     }
 	else if (value == "roblox8") {
-        image.src = "/img/6543f5fe7e2d2.jpg";
+        image.src = "img/6543f5fe7e2d2.jpg";
 		img.value = image.src;
 
     }
 	else if (value == "among") {
-        image.src = "/img/6543f5fe7e2d2.jpg";
+        image.src = "img/6543f5fe7e2d2.jpg";
 		img.value = image.src;
 
     }
@@ -76,30 +76,30 @@ function changingSelection2(selection){
 	t_model.value = value;
 
     if (value == "robocop") {
-        image2.src = "/img/6557bc96d4c1b.jpg";
+        image2.src = "img/6557bc96d4c1b.jpg";
 		img2.value = image2.src;
 
     }else if (value == "anna") {
-        image2.src = "/img/65a031bc946f6.jpg";
+        image2.src = "img/65a031bc946f6.jpg";
 		img2.value = image2.src;
 
     }else if (value == "samael") {
-        image2.src = "/img/659c438748d36.jpg";
+        image2.src = "img/659c438748d36.jpg";
 		img2.value = image2.src;
 
     }
 	else if (value == "roblox7") {
-		image2.src = "/img/658f23c02710f.jpg";
+		image2.src = "img/658f23c02710f.jpg";
 		img2.value = image2.src;
 
     }
 	else if (value == "uriel") {
-        image2.src = "/img/65c67efd3a900.jpg";
+        image2.src = "img/65c67efd3a900.jpg";
 		img2.value = image2.src;
 
     }
 	else if (value == "lucifer") {
-        image2.src = "/img/656f6ef93682a.jpg";
+        image2.src = "img/656f6ef93682a.jpg";
 		img2.value = image2.src;
 
     }
