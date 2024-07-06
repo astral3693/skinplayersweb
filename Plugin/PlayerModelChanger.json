@@ -77,6 +77,17 @@
       "path": "characters/models/nozb1/roblox5_player_model/roblox5_player_model.vmdl",
       "side": "CT" 
     },
+		
+	
+	"skeleton": {
+      "name": "skeleton",
+      "path": "characters/models/nozb1/skeletons_player_model/skeleton_player_model_1/skeleton_nozb1_pm.vmdl",
+      "side": "ALL",
+      "permissions": ["@css/vip", "100"],
+	  "permissionsOr": ["@css/custom-permission", "99"],
+	  "disableleg": true,
+      "hideinmenu": false 
+    },
 	
 	"roblox8": {
       "name": "roblox8",
