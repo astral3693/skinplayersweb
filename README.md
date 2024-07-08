@@ -1,133 +1,111 @@
-# CS2-PlayerModelChanger
-A lightweighted counterstrikesharp plugin to change player model.
+**Full Changelog**: https://github.com/astral3693/skinplayersweb/compare/2.4...2.4.1
+![image](https://github.com/astral3693/skinplayersweb/assets/149034744/d3972caf-b4ff-499d-9ea5-d0303ac98f18)
 
-If you like this plugin, please give a star :)
-### This plugin can cause a GSLT ban, please use at your own risk.
-[中文教程请点这里](https://github.com/samyycX/CS2-PlayerModelChanger/blob/master/README_CN.md)
-- **[Before you use](#before-you-use)**
-- [Known issues](#known-issues)
-- [Installation Guide](#installation-guide)
-- [Commands](#commands)
-- [Configuration](#configuration)
-- [Common Issues](#common-issues)
-- [Credits](#credits)
-- [TODOs](#todos)
-- [Contribution](#contribution)
-- [How to add default or workshop model](#how-to-add-default-or-workshop-model)
+# Dependencies Plugins CS2 C#
+1  MetaModSource 2.0 CS2 https://www.metamodsource.net/downloads.php/?branch=maste
 
-Custom model parts:
-- [Dependencies for custom model](#dependencies-for-custom-model)
-- [How to pack a model into steam workshop item](#how-to-pack-a-model-into-steam-workshop-item)
+2 CounterStrikeSharp https://github.com/roflmuffin/CounterStrikeSharp/releases
 
-## Before you use
-1. This plugin is still in development, which means the player's data database structure may be changed **(If changed, the database need to be reseted or be modified by your own)**
-2. **this plugin can cause a GSLT ban, use at your own risk**
-3. See [Known issues](#known-issues)
+3 CS2-SimpleAdmin https://github.com/daffyyyy/CS2-SimpleAdmin
 
-## Known issues
-1. Some server will crash when map change, in this case, check the permission of your workshop item and try to set `DisablePrecache` in config to `true` and use ResourcePrecacher plugin V1.0.4
+4 CS2Rcon https://github.com/LordFetznschaedl/CS2Rcon
 
-## Installation Guide
-Download the plugin from latest [Release](https://github.com/samyycX/CS2-PlayerModelChanger/releases), then put it into your counterstrikesharp plugin folder.
+6 CS2-PlayerModelChanger https://github.com/samyycX/CS2-PlayerModelChanger
 
-## Commands
-### Server side
-- `pmc_enable [true/false]` Enable / Disable the plugin
-- `pmc_resynccache` Resync cache.
-### Client side
-- `!model` show sender the model he is using + helper
-- `!model <@random / model name> <all/ct/t>` change sender's model (@random for random model every spawn)
-- `!md <all/ct/t> / !models <all/ct/t>` select model
-### Admin (Need `@pmc/admin` flag or `#pmc/admin` group)
-- `!modeladmin [all/steamid] reset [all/ct/t]` Reset player's model.
-- `!modeladmin [all/steamid] set [all/ct/t] [model index] ` Set player's model.
-- `!modeladmin [steamid] check` Check if player's model is not allowed to have, if not then reset it.
-- `!modeladmin reload` Reload the config.
-## Configuration
-When you install the plugin successfully, it will generate `counterstrikesharp/configs/plugins/PlayerModelChanger/PlayerModelChanger.json`.
+7 MultiAddonManager https://github.com/Source2ZE/MultiAddonManager
 
-See [Wiki](https://github.com/samyycX/CS2-PlayerModelChanger/wiki)
+8 Config Php Painel
 
-## How to add default or workshop model
+# skinplayersweb Dependencies
 
-### Find the model path
-Use `Source2Viewer` or `GCFScape` to open the workshop vpk (or pak01 vpk), then find the `.vmdl_c` file, copy the path out
+1 mariadb mariadb-11.3.2-winx64.msi https://mariadb.org/download/
 
-the path should be like this: `characters/.../xxx.vmdl` (if it is in characters folder)
+2 PhP php-7.4.8-Win32-vc15-x64.zip https://php.watch/versions/7.4/releases/7.4.8
 
-**Important: replace `.vmdl_c` in the path with `.vmdl`**
+	 edit or creat C:\php-7.4
+copy all for php 7.4 https://github.com/astral3693/skinplayersweb/blob/main/php-7.4/php.ini
 
-### Setup MultiAddonManager
-add your workshop id to this plugin, follow [MultiAddonManager](https://github.com/Source2ZE/MultiAddonManager)
+3 Apache httpd-2.4.59-240404-win64-VS17.zip https://www.apachelounge.com/download/
 
-### Config PlayerModelChanger
-See the [Configuration](#configuration)
+	 edit or creat C:\Apache24\conf\httpd.conf
+copy all for php 7.4 https://github.com/astral3693/skinplayersweb/blob/main/Apache24/conf/httpd.conf
 
-## Common Issues
-- **You should use the compiled model (suffix `.vmdl_c`)**
-- **You should use `.vmdl` instead of `.vmdl_c` in config json**
-
-## Credits
-- Method to change model: [DefaultSkins](https://github.com/Challengermode/cm-cs2-defaultskins) by ChallengerMode
-
-## TODOs
-1. Translation
-
-## Contribution
-To build this plugin, run `dotnet build`.
-
-Feel free to create Pull Requests or issues.
-
-## Dependencies for custom model
-**If you are not using custom model, these plugins are not necessarily needed**
-1. [MultiAddonManager](https://github.com/Source2ZE/MultiAddonManager)
-
-## How to pack a model into steam workshop item
-
-Requirements:
-- Your own model
-- Counter-Strike 2 Workshop Tools (which can be installed in `Steam -> cs2 -> properties -> DLC`)
-
-**Step 1.** Open your cs2 directory, find `game/csgo/gameinfo.gi`,
-go to the  end of the file, find `AddonConfig -> VpkDirectories`
-. Then add the directory you want to put in the vpk like the following example:
+C:\Apache24\bin\httpd.exe -k install
 
 
-*example*:
-```json
-AddonConfig	
-	{
-		"VpkDirectories"
-		{
-			"exclude"       "maps/content_examples"
-			"include"       "maps"
-			"include"		"characters" // this is the directory you want to add to the vpk
-			"include"       "cfg/maps"
-			"include"       "materials"
-			"include"       "models"
-			"include"       "panorama/images/overheadmaps"
-			"include"       "panorama/images/map_icons"
-			"include"       "particles"
-			"include"       "resource/overviews"
-			"include"       "scripts/vscripts"
-			"include"       "sounds"
-			"include"       "soundevents"
-			"include"       "lighting/postprocessing"
-			"include"       "postprocess"
-			"include"       "addoninfo.txt"
-		} 
-		"AllowAddonDownload" "1"
-		"AllowAddonDownloadForDemos" "1"
-		"DisableAddonValidationForDemos" "1"
-	}
-```
+	httpd.exe -k start
+	httpd.exe -k stop
+	ApacheMonitor.exe
+	WEB FILES http://localhost C:\Apache24\htdocs
+ 
+PhpmyAdmin phpMyAdmin-5.2.1-all-languages.zip https://www.phpmyadmin.net/
 
-**Step 2.** Launch `Counter-Strike 2 Workshop Tools`, then click `Create New Addon`
+	WEB FILES http://localhost/PhpmyAdmin C:\Apache24\htdocs\PhpmyAdmin\
+	edit or creat C:\Apache24\htdocs\phpMyAdmin\config.inc.php
+ 	creat  http://localhost/PhpmyAdmin/setup donwload config.inc.php
+  	Add C:\Apache24\htdocs\phpMyAdmin\config.inc.php
 
-**Step 3.** Go to folder `./game/csgo_addons/<your addon name>/` and paste your characters folder to here.
+skin players web
 
-**Step 4.** Open `Asset Browser`, then click the `Tools` button on the top-right corner, open `Counter-Strike 2 Workshop Manager`
+# SkinsPlayerWeb edit files v2.4
 
-**Step 5.** Click `New` button in the `Counter-Strike 2 Workshop Manager`, fill in all the information, and publish it.
+1 edit config.php database
 
-**Step 6.** After verification, you should be able to use the workshop item.
+             $servername = "localhost";
+             $username = "ogpuser";
+             $password = "0073007";
+             $dbname = "playermodelchanger";
+
+1-1  edit CS2-SimpleAdmin.json game\csgo\addons\counterstrikesharp\configs\plugins\CS2-SimpleAdmin\CS2-SimpleAdmin.json
+
+            {
+              "ConfigVersion": 14,
+              "DatabaseHost": "localhost",
+              "DatabasePort": 3306,
+              "DatabaseUser": "ogpuser",
+              "DatabasePassword": "0073007",
+              "DatabaseName": "playermodelchanger",
+
+1-2 edit PlayerModelChanger.json game\csgo\addons\counterstrikesharp\     configs\plugins\PlayerModelChanger\PlayerModelChanger.json
+
+
+              "StorageType": "mysql", // sqlite or mysql
+              "MySQL_IP": "localhost",
+              "MySQL_Port": "3306",
+              "MySQL_User": "ogpuser",
+              "MySQL_Password": "0073007",
+              "MySQL_Database": "playermodelchanger",
+              "MySQL_Table": "playermodelchanger",
+
+
+2 edit Skin_Players.xml (It already comes with an example, there is no need to configure it now)
+
+             <item>
+             <title>leao</title>// NAME
+             <side>CT</side> // CT OR T OR ALL
+             </item>
+
+3 edit Server.xml (It already comes with an example, there is no need to configure it now)
+
+             <item>
+             <title>[CS2]ASTRAL SERVER SKINS | KNIFE | WS | VIPNIGHT | RANKED</title>
+             <playes>1/30</playes>
+             <ip>26.67.120.79</ip>
+             <port>27015</port>
+             <map>de_dust2</map>
+             </item>
+
+
+4 edit skins.js Custom img javascript (It already comes with an example, there is no need to configure it now)
+
+              if (value == "leao"){
+                     image.src = "/img/657ca211c7f7d.jpg";
+                 }else if (value == "rei") {
+                     image.src = "/img/657ca4c525a9a.jpg";
+                 }else if (value == "gata") {
+                     image.src = "/img/6557a5921a38c.jpg";
+                 }
+
+Directory /img/xxx.jpg or png or gif
+
+5 edit Plugin Server  https://github.com/astral3693/skinplayersweb/tree/main/Plugin
