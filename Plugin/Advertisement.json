@@ -1,0 +1,60 @@
+{
+  "PrintToCenterHtml": false,
+  "WelcomeMessage": {
+    "MessageType": 0,
+    "Message": "Welcome, {RED}{PLAYERNAME}",
+    "DisplayDelay": 5
+  },
+  "Ads": [
+    {
+      "Interval": 35,
+      "Messages": [
+        {
+          "Chat": "IP: {RED}{IP}:{PORT}",// Chat advertising
+          "Center": "Server name: {SERVERNAME}" 		// Advertising in the center
+        },
+        {
+          "Chat": "{current_time}"
+        },
+        {
+          "Chat": "{map_name}"
+        },
+		{
+          "Chat": "{LIGHTBLUE}HOSTING {DEFAULT}★ ASTRAL ★ {LIGHTPURPLE}|{DEFAULT} Entre em nosso Discord e fique por dentro de todas as novidades!{LIME} https://discord.gg/sxq69nuQ7T"
+        }
+      ]
+    },
+	
+	
+    {
+      "Interval": 40,
+      "Messages": [
+        {
+          "Chat": "{BLUE}HOSTING {DEFAULT}★ ASTRAL ★ {LIGHTPURPLE}|{DEFAULT} Comandos Basicos {LIME}!top{DEFAULT}, {LIME}!rank{DEFAULT}, Skin Players, {LIME}!MD{DEFAULT}, Skin Wepom {LIME}!ws"
+        },
+        {
+          "Chat": "{BLUE}HOSTING {DEFAULT}★ ASTRAL ★ {LIGHTPURPLE}SERVER!",
+		"Center": "Bem Vindo ao Servidor do ♪♪ ★ ASTRAL ★♪♪"
+        }
+      ]
+    }
+  ],
+  "Panel": null,
+  "DefaultLang": "US",
+  "LanguageMessages": {
+    "map_name": {
+      "RU": "\u0422\u0435\u043A\u0443\u0449\u0430\u044F \u043A\u0430\u0440\u0442\u0430: {MAP}",
+      "US": "Mapa Atual: {MAP}",
+      "CN": "{GRAY}\u5F53\u524D\u5730\u56FE: {RED}{MAP}"
+    },
+    "current_time": {
+      "RU": "{GRAY}\u0422\u0435\u043A\u0443\u0449\u0435\u0435 \u0432\u0440\u0435\u043C\u044F: {RED}{TIME}",
+      "US": "Hora Atual: {RED}{TIME}",
+      "CN": "{GRAY}\u5F53\u524D\u65F6\u95F4: {RED}{TIME}"
+    }
+  },
+  "MapsName": {
+    "de_mirage": "Mirage",
+    "de_dust": "Dust II"
+  }
+}
