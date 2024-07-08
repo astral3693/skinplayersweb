@@ -10,7 +10,7 @@
 
 4 CS2Rcon https://github.com/LordFetznschaedl/CS2Rcon
 
-6 CS2-PlayerModelChanger https://github.com/samyycX/CS2-PlayerModelChanger
+6 CS2-PlayerModelChanger [https://github.com/astral3693/CS2-PlayerModelChanger](https://github.com/astral3693/CS2-PlayerModelChanger)
 
 7 MultiAddonManager https://github.com/Source2ZE/MultiAddonManager
 
