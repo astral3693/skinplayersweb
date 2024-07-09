@@ -1,0 +1,23 @@
+//Put your map list here
+de_thera:3121217565
+awp_india
+awp_anubis
+awp_closeinferno
+awp_lego_2011
+awp_orange
+Awp_arena_vlgbeta_gg2
+awp_creek
+Awp_Lego_CS2
+awp_lego_2_minecraftv2
+awp_lego_2023_xmas
+awp_neon_cosmic
+de_mirage_night
+surf_aquaflow
+glass_war
+awp_minecraft_castle
+awp_lego_2
+awp_lego_2_carton
+cs_minecraft_landscape
+ze_minecraft_sakura
+minecraftaimmap
+am_minecraft_p
